@@ -1,0 +1,145 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">   
+</head>
+<body>
+    <!-- Scroll to top Button  -->
+    <div class="scroll-button">
+        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+        <!--Navigation  Menu Start-->
+        <nav>
+            <div class="navbar">
+                <div class="logo"><a href="#home">&lt;/JonDev&gt; </a></div>
+                <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <div class="cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                </ul>
+                <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>  
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div >
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        <!-- Home Section  -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <div class="text">
+                    <div class="text-one">Hello</div>
+                    <div class="text-two">I'm Jon Lima</div>
+                    <div class="text-three">Web Developer</div>
+                </div>
+                <div class="button">
+                    <button>Contact Me</button>
+                </div>
+            </div>
+
+        </section>
+        <!-- About me Section -->
+        <section class="about" id="about">
+            <div class="content">
+                <div class="title"><span>About Me</span></div>
+                <div class="about-details">
+                    <div class="right">
+                        <img src="{% static 'WhatsApp Image 2022-01-26 at 10.45.31 PM.jpeg' %}" alt="">
+                    </div>
+                <div class="left">
+                    <div class="topic">Computer Is My Passion</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ab maxime tempora deleniti ex id distinctio quas error tenetur vero, culpa voluptatibus doloribus perspiciatis in quaerat dignissimos, ea facilis debitis. Sequi, saepe accusantium. Voluptatum voluptates velit corporis aperiam deserunt vel cupiditate accusamus doloribus itaque quasi autem qui sunt, suscipit sit. Beatae, odio sequi ad explicabo asperiores architecto harum mollitia voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur excepturi fuga! Est excepturi reprehenderit, illum laboriosam nemo deleniti quae facere exercitationem, a, architecto natus. Iure, soluta vitae esse perspiciatis natus eaque nobis nam corporis voluptatibus porro! Maxime vero, officia ipsa temporibus provident dolorum dolores maiores velit quaerat et distinctio soluta aspernatur asperiores iusto possimus porro sed. Animi, natus ipsa?</p>
+                    <div class="button">
+                        <button>Download CV</button>
+                    </div>
+                </div>    
+            </div>
+            </div>
+        </section>
+        <!-- My Skills Section Start  -->
+        <section class="skills" id="skills">
+            <div class="content">
+            <div class="title"><span>My Skills</span></div>
+            <div class="boxes">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="topic">Web Development</div>
+                    <ol class="web">
+                        <li>HTML.</li>
+                        <li>CSS.</li>
+                        <li>JavaScript.</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <div class="topic">Cyber Security</div>
+                    <ol class="cyber">
+                        <li>Linux OS.</li>
+                        <li>Windows OS.</li>
+                        <li>Networking.</li>
+                        <li>WiFi Penetration Test.</li>
+                        <li>Python.</li>
+                        <li>Bufer Overflow.</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-square-root-alt"></i>
+                    </div>
+                    <div class="topic">Data Science</div>
+                    <ol class="data-science">
+                        <li>SPSS.</li>
+                        <li>SQL.</li>
+                        <li>Python.</li>
+                        <li>Statistic.</li>
+                        <li>Power BI.</li>
+                        <li>Big Data.</li>
+                        <li>Machine Learning.</li>
+                    </ol>
+                </div> 
+                    </div>
+                </div>
+                </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="content">
+                <div class="title"><span>Contact Me</span></div>
+                <div class="text">
+                    <div class="topic">Want To Hire Me</div>
+                    <form class="contact-form" method="post">
+                        {% csrf_token %}
+                        <input name='name' type="text" class="contact-form-text" placeholder="Your Name" required>
+                        <input name='email' type="email" class="contact-form-text" placeholder="Your Email" required>
+                        <textarea name='subject' class="contact-form-text" placeholder="Your mesage"></textarea>
+                        <input type="submit" class="button-contact" value="Send">
+                    </form>
+            </div>
+        </div>>
+        </section>
+
+        <!-- Foter Section -->
+        <footer>
+            <div class="text">
+                <span>Created By <a href="#about">Jon Lima</a> | &#169 All Right Reserved</span>
+            </div>
+        </footer>
+        <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
